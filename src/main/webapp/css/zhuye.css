@@ -1,0 +1,171 @@
+body{
+		background-color:black;
+		font-family:
+		"寰蒋闆呴粦","鏂囨硥椹挎榛�","榛戜綋";
+	}
+	
+	#zhuye{
+		border:0px solid red;
+		width:1144px;
+		height:419px;
+		margin:0px auto;
+		cursor: pointer;
+	}
+	
+	#icon{
+		border:0px solid red;
+		height:50px;
+	}
+	
+	#icon2{
+		border:0px solid red;
+		background-color:#1f6798;
+		width:1144px;
+		height:50px;
+		margin:0px auto;
+	
+	} 
+	#icon3{
+		margin:2px auto;
+		width:1304px;
+		
+	}
+	#icon3 li{
+		float:left;
+		margin:10px 20px 1px 50px;
+		font-size: 20px;
+		cursor: pointer;
+		
+	}
+	
+	#icon3 li:hover{
+		background-color:#3a90d1;
+	}
+	
+	#icon3{
+		list-style-type: none;
+	}
+	
+	#icon3>#search{
+	margin-top: 13px;
+	}
+	
+	#search:HOVER {
+	background-color: none;
+	}
+	
+	
+	#cover li{
+		float:left;
+		margin:3px 47px 10px 3px;
+		border:0px solid red;
+		height:300px;
+		width:165px;
+		color: white;
+		
+	}
+	#cover li:hover{
+		position: relative;
+		left:5px;
+		top:-5px;
+		cursor: pointer;
+	}
+	
+	#content{
+		border:0px solid red;
+		width:1144px;
+		height:1500px;
+		margin:0px auto;
+		position: relative;
+	
+	}
+	
+	#copyright{
+		border:0px solid red;
+		width:1144px;
+		height:55px;
+		margin:0px auto;
+		
+		
+	}
+	
+	#copyright p{
+		text-align:center;
+		color:black;
+		margin:3px auto;
+		
+	}
+	
+	.hide{
+		display:none;
+	}
+	
+	
+	
+	#chat{
+		border:1px solid red;
+		height:300px;
+		width:250px;
+		position: fixed;
+		right:1px;
+		top:200px;
+	} 
+	
+	#chat2{
+		width:250px;
+		height:300px;
+		overflow: auto;
+	}
+	
+	#paixing{
+		
+		position: absolute;
+		right:1px;
+		top:1px;
+	}
+	
+	#paixing img{
+		width:300px;		
+	}
+	
+	#login:hover{
+		position: absolute;
+		background-color:#3a90d1;
+		z-index:99;
+	}
+	
+	.zindex{
+		position: absolute;
+		background-color:#3a90d1;
+		z-index:99;
+	}
+	
+	
+	
+	#link {
+	border:1px solid red;
+	width: 218px;
+	height: 200px;
+	background-color: #3a90d1;
+	position: fixed;
+	top: 453px;
+	left: -130px;
+}
+
+	#top {
+	width: 88px;
+	font-size:20px;
+	text-align:center;
+	background-color: #3a90d1;
+	text-align: center;
+	position: fixed;
+	bottom: 188px;
+	left: 0px;
+}
+
+	#shoukuan{
+	width:218px;
+	height:200px;
+	}
+
+	

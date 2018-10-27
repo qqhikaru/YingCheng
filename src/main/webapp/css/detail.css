@@ -1,0 +1,32 @@
+
+.video{
+    width:420px;
+    height:300px;
+    border:1px solid #ddd;
+    background:#597b84;
+}
+.video::after{
+    content:" ";
+    display:block;
+    clear:both;
+}
+.left{float:left;}
+.img,.text,.img>img{
+    width:200px;height:300px;
+    box-sizing:border-box;
+}
+.text{
+    margin-left:10px;
+}
+.content{
+    width:420px;
+    height:auto;
+    font-size:10px;
+    border:1px solid #ddd;
+    margin-top:10px;
+}
+.pingfen{
+    margin:0 0 0 20px;
+    width:200px;
+}
+

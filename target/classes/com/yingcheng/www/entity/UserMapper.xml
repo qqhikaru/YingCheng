@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="com.yingcheng.www.dao.UserDAOzy">
+	
+	<select id="findAll" resultType="com.yingcheng.www.entity.Userzy">
+		select * from account_dual order by id
+	</select>
+	
+	<select id="findPageAll" parameterType="com.yingcheng.www.entity.PageObject" resultType="com.yingcheng.www.entity.Userzy">
+		select * from (select a.*,rownum rn from (select * from account_dual order by id) a ) where rn between #{startIndex} and #{endIndex}
+	</select>
+	
+	<insert id="save" parameterType="com.yingcheng.www.entity.Userzy">
+		insert into account_dual
+		(id,name,username,password,email,phone)
+		values
+		(account_dual_seq.nextval,#{name},#{username},#{password},#{email},#{phone})
+	</insert>
+	
+	<delete id="delete" parameterType="int">
+		delete from account_dual where id=#{id}
+	</delete>
+	
+	<update id="modify" parameterType="com.yingcheng.www.entity.Userzy">
+		update account_dual set name=#{name},username=#{username},password=#{password},
+			email=#{email},phone=#{phone} where id=#{id} 
+	</update>
+	
+	<select id="findID" parameterType="int" resultType="com.yingcheng.www.entity.Userzy">
+		select * from account_dual where id=#{id}
+	</select>
+	
+	<select id="ferret"  resultType="com.yingcheng.www.entity.Userzy">
+		select * from (select a.*,rownum rn from (select l.* from (select * from account_dual where phone like '%'||#{str}||'%' 
+		or name like '%'||#{str}||'%' or username like '%'||#{str}||'%') l order by id) a ) where rn between #{pageObject.startIndex} and #{pageObject.endIndex}
+	</select>
+	
+	<select id="findcount" resultType="Integer">
+		select count(*) from account_dual
+	</select>
+	
+	<select id="findName" resultType="java.lang.Integer">
+		select count(*) from account_dual where username=#{username}
+	</select>
+</mapper>

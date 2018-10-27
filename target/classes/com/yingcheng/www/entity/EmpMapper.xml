@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="com.yingcheng.www.dao.UserDAO">
+	<select id="findByUsername" parameterType="java.lang.String" resultType="com.yingcheng.www.entity.User">
+		select username,name,password,email,phone from account_dual where username=#{id2}
+	</select>
+	
+	<insert id="register" parameterType="com.yingcheng.www.entity.User">
+		insert into account_dual (id,username,password,name,email,phone)
+		values
+		(account_dual_seq.nextval,#{username},#{password},#{name},#{email},#{phone})
+	</insert>
+	<update id="modify" parameterType="com.yingcheng.www.entity.User">
+		update account_dual set name=#{name},password=#{password},phone=#{phone},email=#{email} where username=#{username}
+	</update>
+	
+	<!-- 搜索电影 -->
+	<select id="findFilm"  resultType="com.yingcheng.www.entity.Film">
+		select * from film_dual
+		<where>
+			<if test="filmname!=null and filmname!='' ">
+					and filmname like '%'||#{filmname}||'%'
+			</if>
+		</where>
+	</select>
+	
+	
+</mapper>
